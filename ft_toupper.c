@@ -6,15 +6,18 @@
 /*   By: sdarius- <sdarius-@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/06 19:18:19 by sdarius-          #+#    #+#             */
-/*   Updated: 2025/07/07 17:40:24 by sdarius-         ###   ########.fr       */
+/*   Updated: 2025/07/09 20:26:37 by sdarius-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_toupper(int c)
+#include "libft.h"
+
+int	ft_toupper(int c)
 {
-    char cl;
-    cl = c;
-    if(cl >='a' && cl <= 'z')
-    return(cl - 32);
-    return cl;
+	char	cl;
+
+	cl = c;
+	if (cl >= 'a' && cl <= 'z')
+		return (cl - 32);
+	return (cl);
 }

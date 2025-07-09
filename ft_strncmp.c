@@ -6,13 +6,13 @@
 /*   By: sdarius- <sdarius-@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/06 19:28:14 by sdarius-          #+#    #+#             */
-/*   Updated: 2025/07/07 17:50:16 by sdarius-         ###   ########.fr       */
+/*   Updated: 2025/07/09 20:32:54 by sdarius-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include "libft.h"
 
-int	ft_strncmp(char *s1, char *s2, size_t n)
+int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
 	while ((*s1 != '\0' || *s2 != '\0') && n)
 	{
