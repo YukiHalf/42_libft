@@ -6,24 +6,13 @@
 /*   By: sdarius- <sdarius-@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/06 19:16:48 by sdarius-          #+#    #+#             */
-/*   Updated: 2025/07/06 19:16:49 by sdarius-         ###   ########.fr       */
+/*   Updated: 2025/07/09 19:47:02 by sdarius-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	strleng(char *str)
-{
-	int	c;
+#include "libft.h"
 
-	c = 0;
-	while (*str != '\0')
-	{
-		c++;
-		str++;
-	}
-	return (c);
-}
-
-unsigned int	ft_strlcat(char *dest, char *src, unsigned int size)
+size_t	ft_strlcat(char *dest, char *src, unsigned int size)
 {
 	unsigned int	sized;
 	unsigned int	sizes;

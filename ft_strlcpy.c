@@ -6,36 +6,27 @@
 /*   By: sdarius- <sdarius-@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/06 19:02:48 by sdarius-          #+#    #+#             */
-/*   Updated: 2025/07/06 19:02:50 by sdarius-         ###   ########.fr       */
+/*   Updated: 2025/07/09 19:45:14 by sdarius-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	srcsize(char *src)
+#include "libft.h"
+
+size_t	ft_strlcpy(char *dest, const char *src, size_t dstsize)
 {
+	int	src_size;
 	int	i;
 
 	i = 0;
-	while (*src != '\0')
+	src_size = ft_strlen(src);
+	if (src_size + 1 < dstsize)
 	{
-		i++;
-		src++;
+		ft_memcpy(dest, src, src_size + 1);
 	}
-	return (i);
-}
-
-unsigned int	ft_strlcpy(char *dest, char *src, unsigned int size)
-{
-	int	i;
-	unsigned int j;
-
-	j=1;
-	i = srcsize(src);
-	while (*src != '\0' && j < size )
+	else if (dstsize != 0)
 	{
-		*dest = *src;
-		dest++;
-		src++;
-		j++;
+		ft_memcpy(dest, src, dstsize - 1);
+		dest[dstsize - 1] = 0;
 	}
-	return (i);
+	return src_size;
 }

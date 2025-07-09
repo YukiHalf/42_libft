@@ -6,13 +6,15 @@
 /*   By: sdarius- <sdarius-@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/06 18:52:42 by sdarius-          #+#    #+#             */
-/*   Updated: 2025/07/06 18:52:44 by sdarius-         ###   ########.fr       */
+/*   Updated: 2025/07/09 19:27:59 by sdarius-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_isprint(int c)
+#include "libft.h"
+
+int	ft_isprint(int c)
 {
-    if(c >= 33 && c <= 126)
-    return 1;
-return 0;
+	if (c >= 32 && c <= 126)
+		return (1);
+	return (0);
 }

@@ -6,7 +6,7 @@
 /*   By: sdarius- <sdarius-@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/06 18:53:54 by sdarius-          #+#    #+#             */
-/*   Updated: 2025/07/09 19:13:18 by sdarius-         ###   ########.fr       */
+/*   Updated: 2025/07/09 19:27:49 by sdarius-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 void	ft_bzero(void *s, size_t n)
 {
-	unsigned char *ptr;
-	ptr = (unsigned char *)s;
+	char *ptr;
+	ptr = (char *)s;
 	while (n)
 	{
 		*ptr = 0;
