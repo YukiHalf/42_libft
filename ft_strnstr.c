@@ -6,25 +6,11 @@
 /*   By: sdarius- <sdarius-@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/07 17:52:35 by sdarius-          #+#    #+#             */
-/*   Updated: 2025/07/07 18:03:23 by sdarius-         ###   ########.fr       */
+/*   Updated: 2025/07/09 20:48:37 by sdarius-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
-
-int	ft_strlen(const char *s)
-{
-	int	i;
-
-	i = 0;
-	while (*s != '0')
-	{
-		i++;
-		s++;
-	}
-	return (i);
-	return (0);
-}
+#include "libft.h"
 
 char	*ft_strnst(const char *haystack, const char *needle, size_t len)
 {

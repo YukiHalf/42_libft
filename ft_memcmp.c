@@ -1,28 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncmp.c                                       :+:      :+:    :+:   */
+/*   ft_memcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sdarius- <sdarius-@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/07/06 19:28:14 by sdarius-          #+#    #+#             */
-/*   Updated: 2025/07/09 20:37:21 by sdarius-         ###   ########.fr       */
+/*   Created: 2025/07/09 20:43:43 by sdarius-          #+#    #+#             */
+/*   Updated: 2025/07/09 20:47:41 by sdarius-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_strncmp(const char *s1, const char *s2, size_t n)
+int	memcmp(const void *s1, const void *s2, size_t n)
 {
-	while ((*s1 != '\0' || *s2 != '\0') && n)
+	size_t	i;
+
+	i = 0;
+	while (i++ < n)
 	{
-		if (*s1 != *s2)
-		{
-			return ((unsigned char *)s1 - (unsigned char *)s2);
-		}
-		s1++;
+		if ((unsigned char *)s1 != (unsigned char *)s2)
+			return ((unsigned char *)s1 - (unsigned char *)s2) ;
+        s1++;
 		s2++;
-		n--;
 	}
-	return (0);
+    return 0;
 }
