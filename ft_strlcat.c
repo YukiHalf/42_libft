@@ -6,29 +6,33 @@
 /*   By: sdarius- <sdarius-@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/06 19:16:48 by sdarius-          #+#    #+#             */
-/*   Updated: 2025/07/09 19:47:02 by sdarius-         ###   ########.fr       */
+/*   Updated: 2025/07/09 20:23:46 by sdarius-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlcat(char *dest, char *src, unsigned int size)
+size_t	ft_strlcat(char *dest, const char *src, size_t dstsize)
 {
-	unsigned int	sized;
-	unsigned int	sizes;
-	unsigned int	i;
-	int				j;
+	size_t	size_d;
+	size_t	size_s;
 
-	i = 0;
-	sized = strleng(dest);
-	sizes = strleng(src);
-	j = sized;
-	while (src[i] != '\0' && i < size && sizes < size)
+	size_d = ft_strlen(dest);
+	size_s = ft_strlen(src);
+	if (size_d >= dstsize)
+		size_d = dstsize;
+	if (dstsize == size_d)
 	{
-		dest[j] = src[i];
-		j++;
-		i++;
+		return (size_d + size_s);
 	}
-	dest[j] = '\0';
-	return (sized + sizes);
+	if (size_s < dstsize - size_d)
+	{
+		ft_memcpy(dest, src, size_s + 1);
+	}
+	else
+	{
+		ft_memcpy(dest, src, dstsize - size_d - 1);
+		dest[dstsize - size_d - 1] = 0;
+	}
+	return (size_d + size_s);
 }

@@ -6,15 +6,18 @@
 /*   By: sdarius- <sdarius-@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/06 19:21:51 by sdarius-          #+#    #+#             */
-/*   Updated: 2025/07/07 17:40:20 by sdarius-         ###   ########.fr       */
+/*   Updated: 2025/07/09 20:25:13 by sdarius-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_tolower(int c)
+#include "libft.h"
+
+int	ft_tolower(int c)
 {
-    char cl;
-    cl = c;
-    if(cl >='A' && cl <= 'Z')
-   return(cl = cl + 32);
-    return cl;
+	char	cl;
+
+	cl = c;
+	if (cl >= 'A' && cl <= 'Z')
+		return (cl = cl + 32);
+	return (cl);
 }
