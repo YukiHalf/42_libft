@@ -1,26 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_striteri.c                                      :+:      :+:    :+:   */
+/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sdarius- <sdarius-@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/07/10 16:47:34 by sdarius-          #+#    #+#             */
-/*   Updated: 2025/07/10 16:49:50 by sdarius-         ###   ########.fr       */
+/*   Created: 2025/07/10 16:57:17 by sdarius-          #+#    #+#             */
+/*   Updated: 2025/07/10 17:01:37 by sdarius-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void ft_striteri(char *s, void (*f)(unsigned int, char*))
+void	ft_putnbr_fd(int n, int fd)
 {
-    unsigned int i;
-    
-    i = 0;
-
-    while(s[i])
-    {
-        (*f)(i , &s[i]);
-        i++;
-    }
+	int dig;
+	if (n == -2147483648)
+		write(fd, "-2147483648", 11);
+	if (n < 0)
+	{
+		write(fd, '-', 1);
+		n = -n;
+		ft_putnbr_fd(n, fd);
+	}
+	else
+	{
+		if (n > 9)
+		{
+			ft_putnbr_fd(n / 10, fd);
+			ft_putnbr_fd(n % 10, fd);
+		}
+		else
+		{
+			dig = n + '0';
+			write(fd, &dig, 1);
+		}
+	}
 }
