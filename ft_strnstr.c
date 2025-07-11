@@ -6,7 +6,7 @@
 /*   By: sdarius- <sdarius-@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/07 17:52:35 by sdarius-          #+#    #+#             */
-/*   Updated: 2025/07/09 20:48:37 by sdarius-         ###   ########.fr       */
+/*   Updated: 2025/07/11 19:59:56 by sdarius-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,8 +20,8 @@ char	*ft_strnst(const char *haystack, const char *needle, size_t len)
 
 	size_needle = ft_strlen(needle);
 	tmp = needle;
-	if (*needle == NULL)
-		return (haystack);
+	if ((char *)*needle == NULL)
+		return ((char *)haystack);
 	while (*haystack && len)
 	{
 		i = 0;

@@ -1,23 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putendl_fd.c                                    :+:      :+:    :+:   */
+/*   ft_lstadd_back.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sdarius- <sdarius-@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/07/10 16:56:08 by sdarius-          #+#    #+#             */
-/*   Updated: 2025/07/11 19:26:25 by sdarius-         ###   ########.fr       */
+/*   Created: 2025/07/11 18:41:44 by sdarius-          #+#    #+#             */
+/*   Updated: 2025/07/11 19:23:07 by sdarius-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putendl_fd(char *s, int fd)
+void	ft_lstadd_back(t_list **lst, t_list *new)
 {
-	while (*s)
-	{
-		write(fd, s, 1);
-		s++;
-	}
-	write(fd, '\n', 1);
+	t_list	*last;
+
+	last = ft_lstlast(*lst);
+	if (!last)
+		*lst = new;
+	last->next = new;
 }

@@ -6,7 +6,7 @@
 /*   By: sdarius- <sdarius-@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/10 14:15:35 by sdarius-          #+#    #+#             */
-/*   Updated: 2025/07/10 14:28:51 by sdarius-         ###   ########.fr       */
+/*   Updated: 2025/07/11 19:24:15 by sdarius-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ char	*ft_substr(const char *s, unsigned int start, size_t len)
 	while (i < len)
 	{
 		str[i] = s[start + i];
-		i++;    
+		i++;
 	}
 	return (str);
 }

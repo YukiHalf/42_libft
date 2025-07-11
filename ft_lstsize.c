@@ -6,13 +6,23 @@
 /*   By: sdarius- <sdarius-@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/11 18:33:38 by sdarius-          #+#    #+#             */
-/*   Updated: 2025/07/11 18:33:49 by sdarius-         ###   ########.fr       */
+/*   Updated: 2025/07/11 19:23:38 by sdarius-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int *ft_lstsize(t_list *lst)
+int	*ft_lstsize(t_list *lst)
 {
-    
+	t_list	*tmp;
+	int		i;
+
+	tmp = lst;
+	i = 0;
+	while (tmp)
+	{
+		i++;
+		tmp = tmp->next;
+	}
+	return (i);
 }

@@ -6,7 +6,7 @@
 /*   By: sdarius- <sdarius-@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/11 18:31:10 by sdarius-          #+#    #+#             */
-/*   Updated: 2025/07/11 18:32:49 by sdarius-         ###   ########.fr       */
+/*   Updated: 2025/07/11 19:23:12 by sdarius-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,5 @@
 void	ft_lstadd_front(t_list **lst, t_list *new)
 {
 	new->next = *lst;
-
 	*lst = new;
 }

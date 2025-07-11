@@ -6,7 +6,7 @@
 /*   By: sdarius- <sdarius-@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/06 18:53:54 by sdarius-          #+#    #+#             */
-/*   Updated: 2025/07/09 19:27:49 by sdarius-         ###   ########.fr       */
+/*   Updated: 2025/07/11 19:46:26 by sdarius-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,8 @@
 
 void	ft_bzero(void *s, size_t n)
 {
-	char *ptr;
+	char	*ptr;
+
 	ptr = (char *)s;
 	while (n)
 	{
@@ -22,5 +23,4 @@ void	ft_bzero(void *s, size_t n)
 		n--;
 		ptr++;
 	}
-	return (s);
 }

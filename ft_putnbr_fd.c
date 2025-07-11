@@ -6,7 +6,7 @@
 /*   By: sdarius- <sdarius-@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/10 16:57:17 by sdarius-          #+#    #+#             */
-/*   Updated: 2025/07/10 17:01:37 by sdarius-         ###   ########.fr       */
+/*   Updated: 2025/07/11 19:26:48 by sdarius-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,8 @@
 
 void	ft_putnbr_fd(int n, int fd)
 {
-	int dig;
+	int	dig;
+
 	if (n == -2147483648)
 		write(fd, "-2147483648", 11);
 	if (n < 0)
