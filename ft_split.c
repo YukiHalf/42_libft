@@ -6,11 +6,16 @@
 /*   By: sdarius- <sdarius-@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/10 15:22:41 by sdarius-          #+#    #+#             */
-/*   Updated: 2025/07/11 19:46:02 by sdarius-         ###   ########.fr       */
+/*   Updated: 2025/07/12 15:58:11 by sdarius-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+char		**fill_word(char **res, const char *s, char c);
+char		**ft_split(const char *s, char c);
+static int	word_count(const char *s, char c);
+static char	*ft_word(const char *s, char c, size_t *i);
 
 char	**ft_split(const char *s, char c)
 {
@@ -45,7 +50,7 @@ static int	word_count(const char *s, char c)
 	return (c_words);
 }
 
-static char	ft_word(const char *s, char c, size_t *i)
+static char	*ft_word(const char *s, char c, size_t *i)
 {
 	size_t	start;
 	char	*word;
@@ -62,11 +67,13 @@ static char	ft_word(const char *s, char c, size_t *i)
 	return (word);
 }
 
-char	*fill_word(char **res, const char *s, char c)
+char	**fill_word(char **res, const char *s, char c)
 {
 	size_t	i;
 	size_t	j;
 
+	i = 0;
+	j = 0;
 	while (s[i])
 	{
 		if (s[i] != c)

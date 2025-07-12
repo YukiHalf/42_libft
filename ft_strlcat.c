@@ -6,7 +6,7 @@
 /*   By: sdarius- <sdarius-@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/06 19:16:48 by sdarius-          #+#    #+#             */
-/*   Updated: 2025/07/09 20:23:46 by sdarius-         ###   ########.fr       */
+/*   Updated: 2025/07/12 16:30:37 by sdarius-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,12 +27,12 @@ size_t	ft_strlcat(char *dest, const char *src, size_t dstsize)
 	}
 	if (size_s < dstsize - size_d)
 	{
-		ft_memcpy(dest, src, size_s + 1);
+		ft_memcpy(dest + size_d, src, size_s + 1);
 	}
 	else
 	{
-		ft_memcpy(dest, src, dstsize - size_d - 1);
-		dest[dstsize - size_d - 1] = 0;
+		ft_memcpy(dest + size_d, src, dstsize - size_d - 1);
+		dest[dstsize - 1] = 0;
 	}
 	return (size_d + size_s);
 }

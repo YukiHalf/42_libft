@@ -6,7 +6,7 @@
 /*   By: sdarius- <sdarius-@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/10 16:56:08 by sdarius-          #+#    #+#             */
-/*   Updated: 2025/07/11 19:26:25 by sdarius-         ###   ########.fr       */
+/*   Updated: 2025/07/12 15:59:55 by sdarius-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,5 +19,5 @@ void	ft_putendl_fd(char *s, int fd)
 		write(fd, s, 1);
 		s++;
 	}
-	write(fd, '\n', 1);
+	write(fd, "\n", 1);
 }

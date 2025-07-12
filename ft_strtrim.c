@@ -6,7 +6,7 @@
 /*   By: sdarius- <sdarius-@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/10 14:42:19 by sdarius-          #+#    #+#             */
-/*   Updated: 2025/07/10 15:01:09 by sdarius-         ###   ########.fr       */
+/*   Updated: 2025/07/12 17:07:55 by sdarius-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ char	*ft_strtrim(const char *s1, const char *set)
 	if (!s1 || !set)
 		return (NULL);
 	start = 0;
-	while (!s1[start] || ft_strchr(set, s1[start]))
+	while (s1[start] && ft_strchr(set, s1[start]))
 		start++;
 	end = ft_strlen(s1);
 	while (end > start && ft_strchr(set, s1[end - 1]))
@@ -31,6 +31,7 @@ char	*ft_strtrim(const char *s1, const char *set)
 	trim = (char *)malloc(trm_len + 1);
 	if (!trim)
 		return (NULL);
-	ft_strlcpy(trim, s1 + start, trm_len + 1);
+	ft_memcpy(trim, s1 + start, trm_len + 1);
+	trim[trm_len] = '\0';
 	return (trim);
 }

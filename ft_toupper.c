@@ -6,7 +6,7 @@
 /*   By: sdarius- <sdarius-@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/06 19:18:19 by sdarius-          #+#    #+#             */
-/*   Updated: 2025/07/09 20:26:37 by sdarius-         ###   ########.fr       */
+/*   Updated: 2025/07/12 16:47:58 by sdarius-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,7 @@
 
 int	ft_toupper(int c)
 {
-	char	cl;
-
-	cl = c;
-	if (cl >= 'a' && cl <= 'z')
-		return (cl - 32);
-	return (cl);
+	if (c >= 'a' && c <= 'z')
+		return (c - 32);
+	return (c);
 }

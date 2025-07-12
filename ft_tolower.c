@@ -6,7 +6,7 @@
 /*   By: sdarius- <sdarius-@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/06 19:21:51 by sdarius-          #+#    #+#             */
-/*   Updated: 2025/07/09 20:25:13 by sdarius-         ###   ########.fr       */
+/*   Updated: 2025/07/12 16:47:55 by sdarius-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,7 @@
 
 int	ft_tolower(int c)
 {
-	char	cl;
-
-	cl = c;
-	if (cl >= 'A' && cl <= 'Z')
-		return (cl = cl + 32);
-	return (cl);
+	if (c >= 'A' && c <= 'Z')
+		return (c + 32);
+	return (c);
 }
