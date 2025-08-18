@@ -6,7 +6,7 @@
 /*   By: sdarius- <sdarius-@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/11 19:28:16 by sdarius-          #+#    #+#             */
-/*   Updated: 2025/07/11 19:28:22 by sdarius-         ###   ########.fr       */
+/*   Updated: 2025/08/18 19:10:14 by sdarius-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,9 @@
 # include <stdlib.h>
 # include <unistd.h>
 # include <stddef.h>
+# include <stdint.h>
+# include <stdbool.h>
+# include <stdarg.h>
 
 typedef struct s_list
 {
@@ -68,4 +71,18 @@ void	ft_lstclear(t_list **lst, void (*del)(void*));
 void	ft_lstiter(t_list *lst, void (*f)(void *));
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
 
+void	display_error(char *error_msg, bool exit);
+//Display error mesages 
+
+void	free2d(char **arr);
+//frees 2d arrays
+
+int		ft_isspace(int c);
+
+long	ft_atol(const char *str);
+//converts string to long
+int		index_of(int n, int *arr);
+// gets index of number in array
+int		ft_sqrt(int number);
+// gets the nearest sqrt 
 #endif
