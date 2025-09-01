@@ -26,6 +26,7 @@ typedef struct s_list
 	struct s_list	*next;
 }	t_list;
 
+char   *get_next_line(int fd);
 int		ft_atoi(const char *str);
 int		ft_isalpha(int c);
 int		ft_isdigit(int c);
@@ -34,6 +35,7 @@ int		ft_isascii(int c);
 int		ft_isprint(int c);
 int		ft_toupper(int c);
 int		ft_tolower(int c);
+int	  ft_strcmp(const char *s1, const char *s2);
 int		ft_strncmp(const char *s1, const char *s2, size_t n);
 int		ft_memcmp(const void *s1, const void *s2, size_t n);
 char	*ft_strchr(const char *s, int c);
@@ -72,7 +74,7 @@ void	ft_lstiter(t_list *lst, void (*f)(void *));
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
 
 void	display_error(char *error_msg, bool exit);
-//Display error mesages 
+//Display error mesages
 
 void	free2d(char **arr);
 //frees 2d arrays
@@ -84,5 +86,5 @@ long	ft_atol(const char *str);
 int		index_of(int n, int *arr);
 // gets index of number in array
 int		ft_sqrt(int number);
-// gets the nearest sqrt 
+// gets the nearest sqrt
 #endif
