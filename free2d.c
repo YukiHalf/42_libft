@@ -6,7 +6,7 @@
 /*   By: sdarius- <sdarius-@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/13 18:02:07 by sdarius-          #+#    #+#             */
-/*   Updated: 2025/08/18 19:05:20 by sdarius-         ###   ########.fr       */
+/*   Updated: 2025/09/11 15:25:22 by sdarius-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	free2d(char **arr)
 {
-	size_t i;
+	size_t	i;
 
 	i = 0;
 	if (arr)

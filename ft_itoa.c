@@ -6,7 +6,7 @@
 /*   By: sdarius- <sdarius-@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/10 16:19:03 by sdarius-          #+#    #+#             */
-/*   Updated: 2025/07/11 19:22:20 by sdarius-         ###   ########.fr       */
+/*   Updated: 2025/09/11 15:24:43 by sdarius-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,6 @@ char	*ft_itoa(int n)
 
 	nbr = n;
 	len = ft_nbrlen(nbr);
-
 	str = malloc(sizeof(char) * (len + 1));
 	if (!str)
 		return (NULL);
