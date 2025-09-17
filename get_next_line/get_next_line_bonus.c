@@ -6,7 +6,7 @@
 /*   By: sdarius- <sdarius-@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/11 15:23:58 by sdarius-          #+#    #+#             */
-/*   Updated: 2025/09/11 15:24:11 by sdarius-         ###   ########.fr       */
+/*   Updated: 2025/09/17 20:45:31 by sdarius-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -95,7 +95,7 @@ char	*read_file(int fd, char *res)
 
 char	*get_next_line(int fd)
 {
-	static char	*buffer[OPEN_MAX];
+	static char	*buffer[BUFFER_SIZE];
 	char		*line;
 
 	ft_putstr_fd("> ", 1);

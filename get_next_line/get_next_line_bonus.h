@@ -6,7 +6,7 @@
 /*   By: sdarius- <sdarius-@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/11 15:24:02 by sdarius-          #+#    #+#             */
-/*   Updated: 2025/09/11 15:24:07 by sdarius-         ###   ########.fr       */
+/*   Updated: 2025/09/17 20:46:07 by sdarius-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@
 # include <sys/uio.h>
 # include <unistd.h>
 
-# define BUFFER_SIZE 50
+# define BUFFER_SIZE 1024
 
 char	*get_next_line(int fd);
 
